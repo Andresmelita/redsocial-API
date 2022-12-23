@@ -8,6 +8,7 @@
 #### /posts
 
     /me                   -> GET | Mis propias publicaciones
+    /user/:id             -> GET | Publicaciones de un usuario en específico
     /:id                  -> GET | PATCH | DELETE | Una publicación en especifico
     /:id/comments         -> GET | POST | Los comentarios de una publicación en especifico
     /:id/likes            -> GET | POST | Los likes de una publicación en especifico
