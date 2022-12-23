@@ -2,30 +2,30 @@
 
 #### /auth
 
-    -/login                 -> POST - Login con las credenciales del usuario para autenticar
-    -/recovery-password     -> POST - Recuperación de contraseña
+    /login                 -> POST - Login con las credenciales del usuario para autenticar
+    /recovery-password     -> POST - Recuperación de contraseña
 
 #### /posts
 
-    - /me                   -> Mis propias publicaciones
-    - /user/:id             -> Publicaciones de usuarios en particular
-    - /:id                  -> GET | PATCH | DELETE - Una publicación en especifico
-    - /:id/comments         -> Los comentarios de una publicación en especifico
-    - /:id/likes            -> Los likes de una publicación en especifico
+    /me                   -> Mis propias publicaciones
+    /user/:id             -> Publicaciones de usuarios en particular
+    /:id                  -> GET | PATCH | DELETE - Una publicación en especifico
+    /:id/comments         -> Los comentarios de una publicación en especifico
+    /:id/likes            -> Los likes de una publicación en especifico
 
 #### /users
 
-    - /me                   -> GET | PATCH  | DELETE  - Mi informacion de usuario
-    - /:id                  -> GET | PATCH* | DELETE* - Un usuario en especifico (*administradores)
-    - /:id/follow           -> POST - Seguir a un usuario en específico
+    /me                   -> GET | PATCH  | DELETE  - Mi informacion de usuario
+    /:id                  -> GET | PATCH* | DELETE* - Un usuario en especifico (*administradores)
+    /:id/follow           -> POST - Seguir a un usuario en específico
 
 #### /follows                  
 
-    - GET - muestra a quien sigues
+    GET - muestra a quien sigues
 
 #### /followers                
     
-    - GET - muestra los seguidores
+    GET - muestra los seguidores
 
 ### Controllers Posts
 - [x] findAllPosts
