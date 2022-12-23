@@ -19,9 +19,13 @@
     - /:id                  -> GET | PATCH* | DELETE* - Un usuario en especifico (*administradores)
     - /:id/follow           -> POST - Seguir a un usuario en específico
 
-#### /follows                  -> GET - muestra a quien sigues
+#### /follows                  
 
-#### /followers                -> GET - muestra los seguidores
+    - GET - muestra a quien sigues
+
+#### /followers                
+    
+    - GET - muestra los seguidores
 
 ### Controllers Posts
 - [x] findAllPosts
