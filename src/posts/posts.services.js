@@ -36,6 +36,17 @@ const getMyPosts = ( req, res ) => {
         })
 }
 
+const getPostsByUser = ( req, res ) => {
+    const userId = req.params.id
+    postControllers.findPostsByUser(userId)
+        .then(data => {
+            res.status(200).json(data)
+        })
+        .catch(err => {
+            res.status(400).json({message: err.message})
+        })
+}
+
 const postNewPost = ( req, res ) => {
     const userId = req.user.id 
     const {content} = req.body 
@@ -88,5 +99,6 @@ module.exports = {
     postNewPost,
     patchPost,
     deletePost,
-    getMyPosts
+    getMyPosts,
+    getPostsByUser
 }

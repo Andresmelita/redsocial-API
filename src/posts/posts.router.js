@@ -17,6 +17,9 @@ router.route('/:id')
     .patch(passportJWT.authenticate('jwt', {session: false}), postServices.patchPost)       // edita un post específico
     .delete(passportJWT.authenticate('jwt', {session: false}), postServices.deletePost)     // permite eliminar un post específico
 
+router.route('/user/:id')
+    .get(postServices.getPostsByUser)                                                       // muestra los posts de un usuario en específico
+
 router.route('/:id/likes')
     .get(likeServices.getAllLikesByPost)                                                    // muestra los likes de un post en específico            
     .post(passportJWT.authenticate('jwt', {session: false}), likeServices.postLike)         // permite darle like a un post específico
