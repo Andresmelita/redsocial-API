@@ -9,6 +9,9 @@ router.route('/')
     .get(postServices.getAllPosts)                                                          // muestra todos los posts
     .post(passportJWT.authenticate('jwt', {session: false}), postServices.postNewPost)      // permite crear un nuevo post (usuario logueado)
 
+router.route('/me')
+    .get(passportJWT.authenticate('jwt', {session: false}), postServices.getMyPosts)        // muestra mis posts
+
 router.route('/:id')
     .get(postServices.getPostById)                                                          // muestra un post específico
     .patch(passportJWT.authenticate('jwt', {session: false}), postServices.patchPost)       // edita un post específico
@@ -17,11 +20,6 @@ router.route('/:id')
 router.route('/:id/likes')
     .get(likeServices.getAllLikesByPost)                                                    // muestra los likes de un post en específico            
     .post(passportJWT.authenticate('jwt', {session: false}), likeServices.postLike)         // permite darle like a un post específico
-
-//? ***********************************************************************************
-
-router.route('/me')
-    .get
 
 router.route('/:id/comments')
     .get(commentServices.getComments)                                                       //permite ver comentarios de una publicación específica

@@ -17,6 +17,15 @@ const findAllPosts = async () => {
     return data
 }
 
+const findPostsByUser = async (userId) => {
+    const data = await Posts.findAll({
+        where: {
+            userId: userId
+        }
+    })
+    return data
+}
+
 const findPostById = async (id) => {
     const data = await Posts.findOne({
         where: {
@@ -69,6 +78,7 @@ module.exports = {
     findPostById, 
     createPost,
     updatePost,
-    removePost
+    removePost,
+    findPostsByUser
 
 }
