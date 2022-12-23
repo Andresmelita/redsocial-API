@@ -16,7 +16,7 @@
 #### /users
 
     - /me                   -> GET | PATCH  | DELETE  - Mi informacion de usuario
-    - /:id                  -> GET | PATCH* | DELETE* - Un usuario en especifico (* peticiones para administradores)
+    - /:id                  -> GET | PATCH* | DELETE* - Un usuario en especifico (*administradores)
     - /:id/follow           -> POST - Seguir a un usuario en específico
 
 #### /follows                  -> GET - muestra a quien sigues
