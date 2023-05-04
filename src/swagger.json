@@ -1,0 +1,31 @@
+{
+    "openapi":"3.0.0",
+    "info": {
+        "title": "Social API - Academlo",
+        "description": "En este proyecto (creado con expressJS), manejamos una API de una red social sencilla",
+        "version":"1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://red-social-lkoe.onrender.com/api/v1"
+        }
+    ], 
+    "paths": {
+        "/users": {
+            "get": {
+                "summary": "Retorna una lista de usuarios",
+                "responses": {
+                    "200": {
+                        "description": "lista de usuarios"
+                    },
+                    "400": {
+                        "description": "Error de sequelize"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Crea un nuevo usuario"
+            }
+        }
+    }
+}
