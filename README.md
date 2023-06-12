@@ -1,4 +1,4 @@
-## Red Social API
+# Red Social API
 
 #### /auth
 
